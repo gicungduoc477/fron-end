@@ -1,0 +1,105 @@
+/* Reset CSS */
+form.d-flex input {
+    width: 300px;
+}
+.navbar-nav .nav-link,
+.btn {
+    white-space: nowrap;
+}
+.btn {
+    padding: 5px 10px;
+    font-size: 15px;
+}
+.navbar-nav {
+    gap: 10px;
+    /* Tạo khoảng cách giữa các mục */
+}
+/* Hiệu ứng chuyển màu nhẹ cho nav-link */
+.navbar-nav .nav-link {
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+  transform: scale(1.05);
+}
+
+/* Dấu gạch chân khi hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Nút tìm kiếm và thông báo */
+.btn-outline-success {
+  border: 1px solid #28a745;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+  transform: scale(1.05);
+}
+
+/* Giỏ hàng có hiệu ứng */
+.navbar-nav .fa-cart-shopping {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover .fa-cart-shopping {
+  transform: scale(1.2);
+}
+
+/* Dropdown menu cải tiến */
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive input search */
+form.d-flex input {
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+form.d-flex input:focus {
+  width: 300px;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  border-color: #007bff;
+}
+
+/* Badge số lượng trong giỏ */
+.navbar-nav .position-absolute {
+  background-color: #ffffff;
+  border: 2px solid #dc3545;
+  font-size: 12px;
+}

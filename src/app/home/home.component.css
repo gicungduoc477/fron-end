@@ -1,0 +1,241 @@
+/* ------------------ PHẦN DANH MỤC ------------------ */
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-button {
+  background-color: #359bdf; /* màu xanh chính */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #007bff; /* màu xanh đậm khi hover */
+  border: 2px solid #007bff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+
+/* Layout của danh sách danh mục */
+.category-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Giao diện từng item trong danh mục */
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    width: 120px;
+    cursor: pointer;
+}
+
+/* Hover cho item danh mục */
+.category-item:hover {
+    transform: scale(1.05);
+    border: 2px solid #000000; /* viền đen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* đổ bóng đen */
+    background-color: #f9f9f9; /* nhẹ nhàng, tránh đỏ */
+}
+
+
+/* Hình ảnh trong danh mục */
+.category-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* Tên danh mục */
+.category-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/* ------------------ PHẦN CAROUSEL ------------------ */
+
+
+/* Slide hiện tại */
+.carousel-item.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+  position: relative;
+  z-index: 2;
+}
+
+/* Hình ảnh trong carousel */
+.carousel-item img {
+  width: 1200px;
+  max-height: 600px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Hiệu ứng khi rê chuột vào ảnh */
+.carousel-item:hover img {
+  transform: scale(1.03);
+}
+
+/* Ẩn số thứ tự slide */
+.carousel-indicators li {
+  overflow: hidden !important;
+}
+
+/* Ảnh bìa sách */
+.card .card-img-top {
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Tên sách */
+.book-title {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Hover cho tên sách */
+.book-title:hover {
+  color: #DC0000;
+  text-shadow: 0 0 5px rgba(220, 0, 0, 0.3);
+}
+
+/* Giá sau giảm */
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Giá gốc */
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Nhãn giảm giá */
+.discount-badge {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Căn lề cho item trong row */
+.row>* {
+  padding-right: 0;
+}
+
+
+
+
+/* Lớp phủ mờ phía trên nền */
+.quote-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+/* Phần chữ nằm phía trên lớp phủ */
+.quote-text {
+    position: relative;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 100;
+}
+
+
+/* ------------------ PHẦN CÂU NÓI HAY - PHONG CÁCH TRUYỆN TRANH ------------------ */
+.quote-box-comic {
+  background: linear-gradient(145deg, #fceabb, #f8b500);
+  border-left: 5px solid #DC0000;
+  border-radius: 12px;
+  color: #222;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+/* Hover */
+.quote-box-comic:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Icon phía trên */
+.quote-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Phần nội dung */
+.quote-text-comic {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Tên tác giả */
+.quote-author {
+  text-align: right;
+  font-size: 14px;
+  font-style: italic;
+  color: #5a5a5a;
+}
+
+/* Hiệu ứng lắc nhẹ cho icon 💬 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+
+/* ------------------ NÚT EBOOK ------------------ */
+button.btn-danger:hover {
+  background-color: #b80000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(220, 0, 0, 0.4);
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent; /* Mặc định không có viền */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid #007bff; /* Viền xanh khi hover */
+  z-index: 2;
+}
