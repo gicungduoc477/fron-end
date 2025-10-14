@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+  font: 700 1rem 'Comic Neue', cursive, sans-serif;
+  background-color: #fffdfa;
+  color: #333;
+}
+
+/* Nền chuyển động nhẹ */
+.comic-detail-bg {
+  background: url('/assets/comic-bg-pattern.svg') repeat;
+  background-size: contain;
+  animation: bgMove 20s linear infinite;
+}
+
+@keyframes bgMove {
+  from { background-position: 0 0; }
+  to { background-position: 100px 100px; }
+}
+
+
+/* Khung ảnh */
+.comic-img-frame {
+  background: #fff0dc;
+  padding: 12px;
+  border: 3px dashed #f7a76c;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+
+/* Ảnh truyện  */
+.comic-cover {
+  border-radius: 12px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #ffb347;
+  transition: box-shadow 0.3s ease;
+}
+.comic-cover:hover {
+  /* Không scale nữa */
+  box-shadow: 4px 4px 0 #ffb347;
+}
+
+/* Tiêu đề truyện */
+.text-comic-title {
+  color: #ff4081;
+  text-shadow: 2px 2px #000;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Mô tả */
+.text-comic-desc {
+  font: 1rem/1.7 sans-serif;
+  color: #444;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* Giá và giảm giá */
+.price {
+  font: bold 1.4rem sans-serif;
+  color: #e74c3c;
+}
+.discount-badge {
+  background: #ff4757;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-left: 6px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  margin-top: 4px;
+}
+
+/* Nút cộng/trừ số lượng */
+.comic-btn-minus, .comic-btn-plus {
+  background-color: #ffd166;
+  color: #000;
+  border: 2px solid #000;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 0 #000;
+}
+.comic-btn-minus:hover, .comic-btn-plus:hover {
+  background-color: #f6bd60;
+  transform: scale(1.05);
+}
+
+/* Ô nhập số lượng */
+.comic-quantity-input {
+  background-color: #fffbe6;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  width: 50px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Nút thêm vào giỏ hàng */
+.btn-comic-cart {
+  background: linear-gradient(to right, #ff6f61, #ffb347);
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 30px;
+  font-weight: bold;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.3s ease;
+}
+.btn-comic-cart:hover {
+  background: linear-gradient(to right, #ffb347, #ff6f61);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 #000;
+}

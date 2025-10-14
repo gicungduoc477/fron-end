@@ -1,0 +1,47 @@
+<div class="container-fluid py-5 mt-5 comic-detail-bg">
+  <div class="container py-5">
+    <div class="row g-4 mb-5">
+      <div class="col-lg-8 col-xl-9">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="comic-border comic-img-frame">
+              <a href="#">
+                <img src="{{bookDetail?.image}}" class="img-fluid rounded comic-cover" alt="Image" />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="fw-bold mb-3 text-comic-title">{{bookDetail?.title}}</h4>
+            <p class="mb-3">Thể loại: {{bookDetail?.Category}}</p>
+
+            <div class="price">
+              {{discountPrice(bookDetail?.price,bookDetail?.discount).toLocaleString()}} đ
+              <span class="discount-badge">-{{bookDetail?.discount}}</span>
+            </div>
+            <div class="old-price">{{bookDetail?.price.toLocaleString()}} đ</div>
+
+            <p class="mb-4 text-comic-desc">{{bookDetail?.description}}</p>
+
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <button class="btn btn-sm rounded-circle comic-btn-minus" type="button" (click)="decreaseQuantity()">
+                <i class="fa fa-minus"></i>
+              </button>
+
+              <input type="text" [(ngModel)]="quantity" readonly
+                     class="form-control form-control-sm text-center comic-quantity-input"
+                     style="width: 50px;" />
+
+              <button class="btn btn-sm rounded-circle comic-btn-plus" type="button" (click)="increaseQuantity()">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+
+            <a class="btn btn-comic-cart px-4 py-2 mb-4">
+              <i class="fa fa-shopping-bag me-2"></i> Add to cart
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
