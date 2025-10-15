@@ -1,8 +1,12 @@
+<!-- Thanh điều hướng (Navbar) sử dụng Bootstrap -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="/image/logosw.png" alt="logo" height="50px" />
+    <!-- Logo cửa hàng (click vào sẽ quay về trang chủ) -->
+    <a class="navbar-brand" routerLink="/">
+      <img src="/image/logosw.png" alt="" height="50px" />
     </a>
+
+    <!-- Nút thu gọn menu khi ở màn hình nhỏ (mobile) -->
     <button
       class="navbar-toggler d-lg-none"
       type="button"
@@ -15,30 +19,96 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Nội dung chính của thanh navbar -->
     <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <!-- Menu bên trái -->
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <!-- Liên kết đến trang chủ -->
         <li class="nav-item">
           <a class="nav-link active" routerLink="/" aria-current="page">
             Trang chủ
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
+
+        <!-- Liên kết đến trang giới thiệu -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">Giới thiệu</a>
         </li>
       </ul>
 
-      <!-- Ô tìm kiếm -->
+      <!-- Ô tìm kiếm và nút thông báo bên phải -->
       <form class="d-flex my-2 my-lg-0">
+        <!-- Ô nhập từ khóa tìm kiếm -->
         <input
           class="form-control me-sm-2"
           type="text"
-          placeholder="Tìm kiếm..."
+          placeholder="Search..."
         />
+
+        <!-- Nút tìm kiếm (chưa có xử lý logic) -->
         <button class="btn btn-outline-success my-2 my-sm-0" type="button">
           Tìm kiếm
         </button>
+
+        <!-- Nút đến trang thông báo đơn hàng -->
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          routerLink="/orderUser"
+        >
+          Thông báo
+        </button>
       </form>
+
+      <!-- Khu vực tài khoản và giỏ hàng -->
+      <ul class="navbar-nav mt-lg-0">
+        <!-- Nút đăng ký tài khoản -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">
+            Đăng ký
+          </a>
+        </li>
+
+        <!-- Menu thả xuống cho tài khoản -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="dropdownId"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Tài khoản
+          </a>
+
+          <!-- Danh sách tùy chọn tài khoản -->
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <!-- Liên kết đến trang đăng nhập -->
+            <a
+              class="dropdown-item"
+              routerLink="/signIn"
+              routerLinkActive="active"
+            >
+              Đăng nhập
+            </a>
+
+            <!-- Nút đăng xuất (chưa có xử lý) -->
+            <a class="dropdown-item" href="#">Đăng xuất</a>
+          </div>
+        </li>
+
+        <!-- Biểu tượng giỏ hàng (cart) -->
+        <li class="nav-item">
+          <a
+            routerLink="/cart"
+            class="nav-link position-relative me-4 my-auto"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

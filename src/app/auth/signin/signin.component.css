@@ -1,0 +1,78 @@
+/* Toàn bộ khung nền */
+.container-fluid {
+  background: linear-gradient(135deg, #a0c4ff, #bdb2ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Khung form */
+.bg-white {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Tiêu đề */
+h2 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.text-primary-50 {
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Input */
+.form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
+}
+
+/* Nút đăng nhập */
+.btn-primary {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 10px;
+  background: #007bff;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Liên kết dưới cùng */
+.text-muted a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text-muted a:hover {
+  text-decoration: underline;
+}
+
+/* Biểu tượng con mắt hiển thị mật khẩu */
+.fa-eye {
+  color: #888;
+  transition: color 0.3s;
+}
+
+.fa-eye:hover {
+  color: #007bff;
+}
